@@ -1,3 +1,4 @@
+
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
@@ -12,3 +13,7 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+(require 'textmate)
+(textmate-mode)
