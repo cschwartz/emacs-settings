@@ -20,3 +20,10 @@
 
 (autoload 'markdown-mode "~/.emacs.d/vendor/markdown-mode/markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
+
+(add-to-list 'load-path
+              "~/.emacs.d/vendor/yasnippet")
+(require 'yasnippet)
+(yas/global-mode 1)
+
+(server-start)
